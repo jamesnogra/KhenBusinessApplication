@@ -78,7 +78,6 @@
             this.loginButton = new System.Windows.Forms.Button();
             this.userText = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.addNewUserLink = new System.Windows.Forms.Label();
             this.businessApplicationsTab.SuspendLayout();
             this.allBusinessApplicationsTab.SuspendLayout();
@@ -103,7 +102,6 @@
             // 
             // allBusinessApplicationsTab
             // 
-            this.allBusinessApplicationsTab.Controls.Add(this.label21);
             this.allBusinessApplicationsTab.Controls.Add(this.searchText);
             this.allBusinessApplicationsTab.Controls.Add(this.label18);
             this.allBusinessApplicationsTab.Controls.Add(this.allBusinessApplicationsDataGrid);
@@ -598,15 +596,6 @@
             this.label20.TabIndex = 36;
             this.label20.Text = "User";
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(21, 21);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(41, 13);
-            this.label21.TabIndex = 3;
-            this.label21.Text = "label21";
-            // 
             // addNewUserLink
             // 
             this.addNewUserLink.AutoSize = true;
@@ -698,7 +687,6 @@
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.TextBox userText;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label addNewUserLink;
     }
 }
