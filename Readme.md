@@ -1,4 +1,4 @@
-# Business Application
+# Location Clearance
 
 * To login use the user ```khen``` and password ```123456```
 * To edit a record, just double click the row (double click on the leftmost of the row, left to Applicant Name)
