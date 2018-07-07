@@ -1,0 +1,10 @@
+C:\Users\James\Documents\Visual Studio 2017\Projects\Business Application\Business Application\bin\Debug\Business Application.exe.config
+C:\Users\James\Documents\Visual Studio 2017\Projects\Business Application\Business Application\bin\Debug\Business Application.exe
+C:\Users\James\Documents\Visual Studio 2017\Projects\Business Application\Business Application\bin\Debug\Business Application.pdb
+C:\Users\James\Documents\Visual Studio 2017\Projects\Business Application\Business Application\obj\Debug\Business Application.csprojResolveAssemblyReference.cache
+C:\Users\James\Documents\Visual Studio 2017\Projects\Business Application\Business Application\obj\Debug\Business_Application.Form1.resources
+C:\Users\James\Documents\Visual Studio 2017\Projects\Business Application\Business Application\obj\Debug\Business_Application.Properties.Resources.resources
+C:\Users\James\Documents\Visual Studio 2017\Projects\Business Application\Business Application\obj\Debug\Business Application.csproj.GenerateResource.Cache
+C:\Users\James\Documents\Visual Studio 2017\Projects\Business Application\Business Application\obj\Debug\Business Application.csproj.CoreCompileInputs.cache
+C:\Users\James\Documents\Visual Studio 2017\Projects\Business Application\Business Application\obj\Debug\Business Application.exe
+C:\Users\James\Documents\Visual Studio 2017\Projects\Business Application\Business Application\obj\Debug\Business Application.pdb
