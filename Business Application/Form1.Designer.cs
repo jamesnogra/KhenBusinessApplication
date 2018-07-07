@@ -1,6 +1,6 @@
 ﻿namespace Business_Application
 {
-    partial class Form1
+    partial class locationClearance
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(locationClearance));
             this.businessApplicationsTab = new System.Windows.Forms.TabControl();
             this.allBusinessApplicationsTab = new System.Windows.Forms.TabPage();
             this.searchText = new System.Windows.Forms.TextBox();
@@ -78,21 +78,14 @@
             this.loginButton = new System.Windows.Forms.Button();
             this.userText = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.createLoginUserTab = new System.Windows.Forms.TabPage();
-            this.createPassword1Text = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.createPasswordText = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.createUserButton = new System.Windows.Forms.Button();
-            this.createUserText = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
+            this.addNewUserLink = new System.Windows.Forms.Label();
             this.businessApplicationsTab.SuspendLayout();
             this.allBusinessApplicationsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.allBusinessApplicationsDataGrid)).BeginInit();
             this.addBusinessApplicationTab.SuspendLayout();
             this.editBusinessApplcationTab.SuspendLayout();
             this.loginTab.SuspendLayout();
-            this.createLoginUserTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // businessApplicationsTab
@@ -101,7 +94,6 @@
             this.businessApplicationsTab.Controls.Add(this.addBusinessApplicationTab);
             this.businessApplicationsTab.Controls.Add(this.editBusinessApplcationTab);
             this.businessApplicationsTab.Controls.Add(this.loginTab);
-            this.businessApplicationsTab.Controls.Add(this.createLoginUserTab);
             this.businessApplicationsTab.Location = new System.Drawing.Point(13, 13);
             this.businessApplicationsTab.Name = "businessApplicationsTab";
             this.businessApplicationsTab.SelectedIndex = 0;
@@ -111,6 +103,7 @@
             // 
             // allBusinessApplicationsTab
             // 
+            this.allBusinessApplicationsTab.Controls.Add(this.label21);
             this.allBusinessApplicationsTab.Controls.Add(this.searchText);
             this.allBusinessApplicationsTab.Controls.Add(this.label18);
             this.allBusinessApplicationsTab.Controls.Add(this.allBusinessApplicationsDataGrid);
@@ -605,103 +598,40 @@
             this.label20.TabIndex = 36;
             this.label20.Text = "User";
             // 
-            // createLoginUserTab
-            // 
-            this.createLoginUserTab.Controls.Add(this.createPassword1Text);
-            this.createLoginUserTab.Controls.Add(this.label23);
-            this.createLoginUserTab.Controls.Add(this.createPasswordText);
-            this.createLoginUserTab.Controls.Add(this.label21);
-            this.createLoginUserTab.Controls.Add(this.createUserButton);
-            this.createLoginUserTab.Controls.Add(this.createUserText);
-            this.createLoginUserTab.Controls.Add(this.label22);
-            this.createLoginUserTab.Location = new System.Drawing.Point(4, 22);
-            this.createLoginUserTab.Name = "createLoginUserTab";
-            this.createLoginUserTab.Padding = new System.Windows.Forms.Padding(3);
-            this.createLoginUserTab.Size = new System.Drawing.Size(951, 550);
-            this.createLoginUserTab.TabIndex = 4;
-            this.createLoginUserTab.Text = "Create Login User";
-            this.createLoginUserTab.UseVisualStyleBackColor = true;
-            // 
-            // createPassword1Text
-            // 
-            this.createPassword1Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createPassword1Text.Location = new System.Drawing.Point(146, 71);
-            this.createPassword1Text.Name = "createPassword1Text";
-            this.createPassword1Text.Size = new System.Drawing.Size(420, 22);
-            this.createPassword1Text.TabIndex = 203;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(7, 75);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(116, 16);
-            this.label23.TabIndex = 46;
-            this.label23.Text = "Confirm Password";
-            // 
-            // createPasswordText
-            // 
-            this.createPasswordText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createPasswordText.Location = new System.Drawing.Point(146, 43);
-            this.createPasswordText.Name = "createPasswordText";
-            this.createPasswordText.Size = new System.Drawing.Size(420, 22);
-            this.createPasswordText.TabIndex = 202;
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(7, 47);
+            this.label21.Location = new System.Drawing.Point(21, 21);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(68, 16);
-            this.label21.TabIndex = 44;
-            this.label21.Text = "Password";
+            this.label21.Size = new System.Drawing.Size(41, 13);
+            this.label21.TabIndex = 3;
+            this.label21.Text = "label21";
             // 
-            // createUserButton
+            // addNewUserLink
             // 
-            this.createUserButton.BackColor = System.Drawing.Color.Black;
-            this.createUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createUserButton.ForeColor = System.Drawing.Color.White;
-            this.createUserButton.Location = new System.Drawing.Point(366, 99);
-            this.createUserButton.Name = "createUserButton";
-            this.createUserButton.Size = new System.Drawing.Size(200, 40);
-            this.createUserButton.TabIndex = 204;
-            this.createUserButton.Text = "Create User";
-            this.createUserButton.UseVisualStyleBackColor = false;
-            this.createUserButton.Click += new System.EventHandler(this.createUserButton_Click);
+            this.addNewUserLink.AutoSize = true;
+            this.addNewUserLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewUserLink.ForeColor = System.Drawing.Color.SteelBlue;
+            this.addNewUserLink.Location = new System.Drawing.Point(873, 9);
+            this.addNewUserLink.Name = "addNewUserLink";
+            this.addNewUserLink.Size = new System.Drawing.Size(95, 16);
+            this.addNewUserLink.TabIndex = 1;
+            this.addNewUserLink.Text = "Add New User";
+            this.addNewUserLink.Click += new System.EventHandler(this.addNewUserLink_Click);
             // 
-            // createUserText
-            // 
-            this.createUserText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createUserText.Location = new System.Drawing.Point(146, 15);
-            this.createUserText.Name = "createUserText";
-            this.createUserText.Size = new System.Drawing.Size(420, 22);
-            this.createUserText.TabIndex = 201;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(7, 19);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(37, 16);
-            this.label22.TabIndex = 41;
-            this.label22.Text = "User";
-            // 
-            // Form1
+            // locationClearance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 601);
+            this.Controls.Add(this.addNewUserLink);
             this.Controls.Add(this.businessApplicationsTab);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.Name = "Form1";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.Name = "locationClearance";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Location Clearance";
+            this.Resize += new System.EventHandler(this.locationClearance_Resize);
             this.businessApplicationsTab.ResumeLayout(false);
             this.allBusinessApplicationsTab.ResumeLayout(false);
             this.allBusinessApplicationsTab.PerformLayout();
@@ -712,9 +642,8 @@
             this.editBusinessApplcationTab.PerformLayout();
             this.loginTab.ResumeLayout(false);
             this.loginTab.PerformLayout();
-            this.createLoginUserTab.ResumeLayout(false);
-            this.createLoginUserTab.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -769,14 +698,8 @@
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.TextBox userText;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TabPage createLoginUserTab;
-        private System.Windows.Forms.TextBox createPassword1Text;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox createPasswordText;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button createUserButton;
-        private System.Windows.Forms.TextBox createUserText;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label addNewUserLink;
     }
 }
 

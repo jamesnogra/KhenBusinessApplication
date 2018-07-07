@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Business_Application
 {
-    public partial class Form1 : Form
+    public partial class locationClearance : Form
     {
         public string csvFileName = "DATA/Applications.csv";
         public string csvFileNameBackup = "DATA/ApplicationsBackup.csv"; //no editing and deleting
@@ -16,13 +16,13 @@ namespace Business_Application
         Login tempLogin;
         bool isLoggedIn = false;
 
-        public Form1()
+        public locationClearance()
         {
             InitializeComponent();
+            this.MinimumSize = new System.Drawing.Size(620, 500);
             enableTab(allBusinessApplicationsTab, false);
             enableTab(addBusinessApplicationTab, false);
             enableTab(editBusinessApplcationTab, false);
-            enableTab(createLoginUserTab, false);
             businessApplicationsTab.SelectedIndex = 3; //login on first load
             maskPasswordFields();
             loadCSVFromFile();
@@ -43,7 +43,7 @@ namespace Business_Application
             businessDetails += projectTypeText.Text.Replace(',', commaDelimiterForData) + ",";
             businessDetails += locationText.Text.Replace(',', commaDelimiterForData) + ",";
             businessDetails += orNoText.Text.Replace(',', commaDelimiterForData) + ",";
-            businessDetails += amountPaidText.Text.Replace(',', commaDelimiterForData) + "\n";
+            businessDetails += amountPaidText.Text.Replace(",", "") + "\n";
             if (!File.Exists(csvFileName))
             {
                 MessageBox.Show("Something went wrong reading the file "+ csvFileName + ".");
@@ -188,7 +188,7 @@ namespace Business_Application
             editedLine += projectTypeEditText.Text.Replace(',', commaDelimiterForData) + ",";
             editedLine += locationEditText.Text.Replace(',', commaDelimiterForData) + ",";
             editedLine += orNoEditText.Text.Replace(',', commaDelimiterForData) + ",";
-            editedLine += amountPaidEditText.Text.Replace(',', commaDelimiterForData) + ",";
+            editedLine += amountPaidEditText.Text.Replace(",", "") + ",";
             editDeleteInCSVByID(idEditText.Text, "EDIT", editedLine);
             MessageBox.Show("Location clearance has been edited.");
             enableTab(editBusinessApplcationTab, false);
@@ -265,8 +265,8 @@ namespace Business_Application
                 passwordText.Text = "";
                 enableTab(allBusinessApplicationsTab, true);
                 enableTab(addBusinessApplicationTab, true);
-                enableTab(createLoginUserTab, true);
                 businessApplicationsTab.SelectedIndex = 0;
+                businessApplicationsTab.TabPages.Remove(loginTab);
             }
             else
             {
@@ -274,36 +274,31 @@ namespace Business_Application
                 MessageBox.Show("Invalid login credentials!");
             }
         }
-
-        private void createUserButton_Click(object sender, EventArgs e)
-        {
-            if (createPasswordText.Text != createPassword1Text.Text)
-            {
-                MessageBox.Show("Password does not match!");
-                return;
-            }
-            if (createUserText.Text.Length < 2 || createPasswordText.Text.Length < 2)
-            {
-                MessageBox.Show("Username or Password is too short!");
-                return;
-            }
-            if (!tempLogin.addUser(createUserText.Text, createPasswordText.Text))
-            {
-                MessageBox.Show("User already exists in the record!");
-                return;
-            }
-            createUserText.Text = "";
-            createPasswordText.Text = "";
-            createPassword1Text.Text = "";
-            MessageBox.Show("User " + createUserText.Text + " has been added to the list.");
-        }
-
+       
         private void maskPasswordFields()
         {
             char tempPasswordChar = '■';
             passwordText.PasswordChar = tempPasswordChar;
-            createPassword1Text.PasswordChar = tempPasswordChar;
-            createPasswordText.PasswordChar = tempPasswordChar;
+        }
+
+        private void locationClearance_Resize(object sender, EventArgs e)
+        {
+            Control control = (Control)sender;
+            businessApplicationsTab.Width = control.Size.Width - 40;
+            businessApplicationsTab.Height = control.Size.Height - 65;
+            allBusinessApplicationsDataGrid.Width = businessApplicationsTab.Width - 25;
+            allBusinessApplicationsDataGrid.Height = businessApplicationsTab.Height - 80;
+        }
+
+        private void addNewUserLink_Click(object sender, EventArgs e)
+        {
+            if (!isLoggedIn)
+            {
+                MessageBox.Show("Please login first!");
+                return;
+            }
+            var tempForm = new CreateUserForm();
+            tempForm.Show(this);
         }
     }
 }
