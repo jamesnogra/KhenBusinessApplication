@@ -51,7 +51,7 @@ namespace Business_Application
             }
             File.AppendAllText(csvFileName, businessDetails);
             File.AppendAllText(csvFileNameBackup, businessDetails);
-            DialogResult dr = MessageBox.Show("New location clearance has been added. Do you want to clear the form?", "Saved Application", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult dr = MessageBox.Show("New locational clearance has been added. Do you want to clear the form?", "Saved Application", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (dr == DialogResult.Yes)
             {
                 clearAddBusinessApplicationForm();
@@ -109,7 +109,7 @@ namespace Business_Application
 
         private void allBusinessApplicationsDataGrid_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            DialogResult usersChoice = MessageBox.Show("Are you sure you want to delete this location clearance?", "Deleting Record", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult usersChoice = MessageBox.Show("Are you sure you want to delete this locational clearance?", "Deleting Record", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (usersChoice == DialogResult.Cancel)
             {
                 e.Cancel = true;
@@ -153,7 +153,7 @@ namespace Business_Application
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error in deleting the location clearance. Please close the " + csvFileName+" file.");
+                MessageBox.Show("Error in deleting the locational clearance. Please close the " + csvFileName+" file.");
             }
         }
 
@@ -190,7 +190,7 @@ namespace Business_Application
             editedLine += orNoEditText.Text.Replace(',', commaDelimiterForData) + ",";
             editedLine += amountPaidEditText.Text.Replace(",", "") + ",";
             editDeleteInCSVByID(idEditText.Text, "EDIT", editedLine);
-            MessageBox.Show("Location clearance has been edited.");
+            MessageBox.Show("Locational clearance has been edited.");
             enableTab(editBusinessApplcationTab, false);
             businessApplicationsTab.SelectedIndex = 0;
         }
@@ -210,7 +210,7 @@ namespace Business_Application
 
         private void businessApplicationsTabs_Selected(object sender, TabControlEventArgs e)
         {
-            //every time the all location clearances tab is opened, load again tje CSV File
+            //every time the all locational clearances tab is opened, load again tje CSV File
             if (businessApplicationsTab.SelectedIndex == 0)
             {
                 loadCSVFromFile();

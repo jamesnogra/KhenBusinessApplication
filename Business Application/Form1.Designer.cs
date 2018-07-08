@@ -110,7 +110,7 @@
             this.allBusinessApplicationsTab.Padding = new System.Windows.Forms.Padding(3);
             this.allBusinessApplicationsTab.Size = new System.Drawing.Size(951, 550);
             this.allBusinessApplicationsTab.TabIndex = 0;
-            this.allBusinessApplicationsTab.Text = "All Location Clearances";
+            this.allBusinessApplicationsTab.Text = "All Locational Clearances";
             this.allBusinessApplicationsTab.UseVisualStyleBackColor = true;
             // 
             // searchText
@@ -168,7 +168,7 @@
             this.addBusinessApplicationTab.Padding = new System.Windows.Forms.Padding(3);
             this.addBusinessApplicationTab.Size = new System.Drawing.Size(951, 550);
             this.addBusinessApplicationTab.TabIndex = 1;
-            this.addBusinessApplicationTab.Text = "Add Location Clearance";
+            this.addBusinessApplicationTab.Text = "Add Locational Clearance";
             this.addBusinessApplicationTab.UseVisualStyleBackColor = true;
             // 
             // addBusinessApplicationButton
@@ -180,7 +180,7 @@
             this.addBusinessApplicationButton.Name = "addBusinessApplicationButton";
             this.addBusinessApplicationButton.Size = new System.Drawing.Size(200, 40);
             this.addBusinessApplicationButton.TabIndex = 9;
-            this.addBusinessApplicationButton.Text = "Save Location Clearance";
+            this.addBusinessApplicationButton.Text = "Save Locational Clearance";
             this.addBusinessApplicationButton.UseVisualStyleBackColor = false;
             this.addBusinessApplicationButton.Click += new System.EventHandler(this.addBusinessApplicationButton_Click);
             // 
@@ -354,7 +354,7 @@
             this.editBusinessApplcationTab.Padding = new System.Windows.Forms.Padding(3);
             this.editBusinessApplcationTab.Size = new System.Drawing.Size(951, 550);
             this.editBusinessApplcationTab.TabIndex = 2;
-            this.editBusinessApplcationTab.Text = "Edit Location Clearance";
+            this.editBusinessApplcationTab.Text = "Edit Locational Clearance";
             this.editBusinessApplcationTab.UseVisualStyleBackColor = true;
             // 
             // idEditText
@@ -384,7 +384,7 @@
             this.editBusinessApplicationButton.Name = "editBusinessApplicationButton";
             this.editBusinessApplicationButton.Size = new System.Drawing.Size(200, 40);
             this.editBusinessApplicationButton.TabIndex = 59;
-            this.editBusinessApplicationButton.Text = "Edit Location Clearance";
+            this.editBusinessApplicationButton.Text = "Edit Locational Clearance";
             this.editBusinessApplicationButton.UseVisualStyleBackColor = false;
             this.editBusinessApplicationButton.Click += new System.EventHandler(this.editBusinessApplicationButton_Click);
             // 
@@ -619,7 +619,7 @@
             this.Name = "locationClearance";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Location Clearance";
+            this.Text = "Locational Clearance";
             this.Resize += new System.EventHandler(this.locationClearance_Resize);
             this.businessApplicationsTab.ResumeLayout(false);
             this.allBusinessApplicationsTab.ResumeLayout(false);
