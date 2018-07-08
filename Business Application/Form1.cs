@@ -56,7 +56,7 @@ namespace Business_Application
             {
                 clearAddBusinessApplicationForm();
             }
-            businessApplicationsTab.SelectedIndex = 0;
+            //businessApplicationsTab.SelectedIndex = 0;
         }
 
         private bool checkAddBusinessApplicationFields()
